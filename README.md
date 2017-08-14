@@ -2,16 +2,16 @@
 Scripts for the work with data
 
 
-# 1. Extraction of files 
+## 1. Extraction of files 
 
 bsub -e extraMinus.err -J ext_minus -o ext_minus.out -q dee-long -cwd /scratch/beegfs/monthly/mserrano/all_genes/minus_genes "tar -zxvf /data/ul/dee/dee_phylo/mserrano/Bromelia/FastaMinusGenes.tar.gz"
 
 bsub -e extraPlus.err -J ext_mplus -o ext_plus.out -q dee-long -cwd /scratch/beegfs/monthly/mserrano/all_genes/plus_genes "tar -zxvf /data/ul/dee/dee_phylo/mserrano/Bromelia/FastaPlusGenes.tar.gz"
 
 
-# 2. Counting N in alignments and size, then filtering 
+## 2. Counting N in alignments and size, then filtering 
 
-##Estimating parameters 
+Estimating parameters 
 
 bsub -e countingP.err -J Count_plus -o Count_plus.out -q dee-long -cwd /scratch/beegfs/monthly/mserrano/all_genes/6.fastaCorrectedPlusFinal/ "perl /scratch/beegfs/monthly/mserrano/all_genes/counting_nucleotides.pl > /scratch/beegfs/monthly/mserrano/all_genes/align_length_plus.out"
 
